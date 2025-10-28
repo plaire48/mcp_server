@@ -1,0 +1,20 @@
+{
+  "id": "basic_json",
+  "name": "기본 JSON 처리",
+  "package_description": "텍스트를 JSON 요약으로 변환하거나 JSON 데이터를 수정합니다.",
+  "tool_source_file": "main.py",
+  "config_vars": [
+    { "name": "JSON_LOG_LEVEL", "label": "JSON 도구 로그 레벨 (INFO, DEBUG 등)" },
+    { "name": "DEFAULT_PREVIEW_LENGTH", "label": "요약 미리보기 길이 (숫자)" }
+  ],
+  "tools": [
+    { 
+      "function_name": "text_to_json", 
+      "description": "입력 텍스트를 요약 정보(JSON)로 변환합니다." 
+    },
+    { 
+      "function_name": "append_to_json", 
+      "description": "기존 JSON 객체에 새로운 데이터를 지정된 키로 추가합니다. 'existing_json'과 'new_data'는 JSON 객체여야 합니다." 
+    }
+  ]
+}
