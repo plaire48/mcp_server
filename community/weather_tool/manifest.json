@@ -1,0 +1,34 @@
+{
+  "id": "weather_tool",
+  "name": "날씨 정보 조회",
+  "package_description": "도시 이름으로 현재 날씨 또는 예보 정보를 조회합니다 (가상 API 사용).",
+  "tool_source_file": "main.py",
+  "config_vars": [
+    { 
+      "name": "WEATHER_API_KEY", 
+      "label": "날씨 API 키 (필수)" 
+    },
+    { 
+      "name": "WEATHER_API_ENDPOINT", 
+      "label": "날씨 API 엔드포인트 URL" 
+    },
+    { 
+      "name": "DEFAULT_UNITS", 
+      "label": "기본 온도 단위 (metric/imperial)" 
+    },
+    { 
+      "name": "WEATHER_LOG_LEVEL", 
+      "label": "날씨 도구 로그 레벨 (INFO, DEBUG 등)" 
+    }
+  ],
+  "tools": [
+    { 
+      "function_name": "get_weather", 
+      "description": "지정된 도시의 현재 날씨 정보를 가져옵니다. 'units' 파라미터로 'metric' 또는 'imperial' 지정 가능 (선택 사항)." 
+    },
+    { 
+      "function_name": "get_forecast", 
+      "description": "지정된 도시의 향후 N일간 날씨 예보를 가져옵니다. 'days' 파라미터로 일수 지정 가능 (기본값 3)." 
+    }
+  ]
+}
